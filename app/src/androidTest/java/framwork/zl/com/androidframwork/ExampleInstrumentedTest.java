@@ -1,11 +1,14 @@
 package framwork.zl.com.androidframwork;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import framwork.zl.com.androidframwork.baseframwork.MainActivity;
 
 import static org.junit.Assert.*;
 
@@ -22,5 +25,11 @@ public class ExampleInstrumentedTest {
         Context appContext = InstrumentationRegistry.getTargetContext();
 
         assertEquals("framwork.zl.com.androidframwork", appContext.getPackageName());
+
+        Intent intent = new Intent(appContext,MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        appContext.startActivity(intent);
+
+
     }
 }

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AndroidFramwork</string>
+    <string name="main_menu_write_email">写邮件</string>
+    <string name="main_menu_write_note">写记事</string>
+    <string name="main_menu_upload_file">上传文件</string>
+    <string name="main_menu_setting">设置</string>
+    <string name="main_menu_feedback">意见反馈</string>
 </resources>
