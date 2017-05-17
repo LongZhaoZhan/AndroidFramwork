@@ -1,8 +1,6 @@
-package utils;
+package com.zl.framwork.utils;
 
 import android.util.Log;
-
-import framwork.zl.com.androidframwork.baseframwork.BaseFragment;
 
 /**
  * 作者：${ZhaoLong} on 2017/5/15 13:56

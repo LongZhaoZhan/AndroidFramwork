@@ -1,14 +1,8 @@
-package framwork.zl.com.androidframwork.baseframwork;
+package com.zl.framwork.baseframwork;
 
-import android.content.Context;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
-import utils.LogUtil;
+import com.zl.framwork.utils.LogUtil;
 
 /**
  * 作者：${ZhaoLong} on 2017/3/20 10:17

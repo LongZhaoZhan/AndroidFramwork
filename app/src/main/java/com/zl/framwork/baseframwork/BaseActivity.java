@@ -1,4 +1,4 @@
-package framwork.zl.com.androidframwork.baseframwork;
+package com.zl.framwork.baseframwork;
 
 import android.content.Context;
 import android.os.Bundle;

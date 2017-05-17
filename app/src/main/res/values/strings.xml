@@ -5,4 +5,13 @@
     <string name="main_menu_upload_file">上传文件</string>
     <string name="main_menu_setting">设置</string>
     <string name="main_menu_feedback">意见反馈</string>
+
+
+    <string name="homepage_rc_lv">首页RecyclerView</string>
+    <string name="video_lv">视频ListView</string>
+    <string name="find_lv">发现</string>
+    <string name="my_lv">我的ListView</string>
+
+
+
 </resources>
