@@ -5,12 +5,11 @@ import android.content.Intent;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 
+import com.zl.framwork.baseframwork.MainActivity;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
-import framwork.zl.com.androidframwork.baseframwork.MainActivity;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Instrumentation test, which will execute on an Android device.

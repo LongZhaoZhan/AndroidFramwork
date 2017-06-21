@@ -6,9 +6,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.zl.framwork.R;
 import com.zl.framwork.baseframwork.BaseFragment;
+import com.zl.framwork.http.VolleyUtil;
+import com.zl.framwork.utils.LogUtil;
 
 /**
  * 作者：${ZhaoLong} on 2017/5/15 13:39
@@ -19,6 +22,8 @@ import com.zl.framwork.baseframwork.BaseFragment;
 
 public class HomePageFragment extends BaseFragment {
 
+    private TextView title;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -28,11 +33,20 @@ public class HomePageFragment extends BaseFragment {
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.home_page_rc_lv);
 
 
+        LogUtil.getInstance().i("HomePageFragment_RecyclerView");
 
+
+        title = (TextView) view.findViewById(R.id.title);
 
 
 
         return view;
+    }
+
+    public void volleyStr(View strBtn){
+        VolleyUtil volleyUtil = new VolleyUtil();
+        volleyUtil.sendVolleyStrPost();
+
     }
 
 

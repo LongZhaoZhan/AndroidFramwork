@@ -12,12 +12,10 @@ import com.zl.framwork.utils.LogUtil;
 
 public class BaseFragment extends Fragment{
 
-    private static final String TAG = "BaseFragment";
-
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
-        LogUtil.getInstance().i(TAG, "setUserVisibleHint");
+        LogUtil.getInstance().i("setUserVisibleHint");
     }
 
 }

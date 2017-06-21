@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.zl.framwork">
 
+    <!--网络请求权限-->
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,6 +16,7 @@
         >
         <activity android:name=".baseframwork.MainActivity"
                   android:theme="@style/AppStartPage"
+                  android:excludeFromRecents="true"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
