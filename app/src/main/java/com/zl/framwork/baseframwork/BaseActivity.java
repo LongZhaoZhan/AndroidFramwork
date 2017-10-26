@@ -10,7 +10,7 @@ import com.zl.framwork.utils.LogUtil;
 /**
  * 作者：${ZhaoLong} on 2017/3/20 09:42
  * 邮箱：127124zhao@gmail.com
- * todo ==>>>
+ * todo ==>>> 所有activity基类
  */
 
 public class BaseActivity extends AppCompatActivity {

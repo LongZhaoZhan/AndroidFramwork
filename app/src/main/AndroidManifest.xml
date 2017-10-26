@@ -12,12 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:name=".baseframwork.MyBaseApplication"
+        android:name=".MyBaseApplication"
         >
-        <activity android:name=".baseframwork.MainActivity"
-                  android:theme="@style/AppStartPage"
-                  android:excludeFromRecents="true"
-            >
+        <!--android:theme="@style/AppStartPage"-->
+        <activity android:name=".MainActivity"
+                  android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

@@ -1,21 +1,37 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'zlframwork'
+            keyPassword 'zhaolong123'
+            storeFile file('D:/AndroidStudio_Workspace/AndroidFramwork/zlframwork.jks')
+            storePassword 'zhaolong123'
+        }
+    }
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "framwork.zl.com.androidframwork"
+        applicationId "com.zl.framwork"
         minSdkVersion 14
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.config
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.config
+        }
+    }
+    productFlavors {
     }
 }
 
@@ -33,10 +49,17 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:3.7.0'
     //noinspection GradleCompatible
     compile 'com.android.support:support-v4:19.1.0'
-
     //noinspection GradleCompatible
     compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
     //noinspection GradleCompatible
     compile 'com.android.support:recyclerview-v7:23.4.0'
+    //http框架之volley框架
     compile 'com.android.volley:volley:1.0.0'
+    //view注入式框架butterKnife奶油小刀使用
+    compile 'com.jakewharton:butterknife:8.6.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+    //内存泄漏分析框架LeakCanary使用
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
 }
