@@ -4,6 +4,10 @@
 
     <!--网络请求权限-->
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <!--sd卡写入权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <!--sd卡读取权限-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -12,16 +16,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:name=".MyBaseApplication"
+        android:name=".BaseApplication"
         >
         <!--android:theme="@style/AppStartPage"-->
-        <activity android:name=".MainActivity"
-                  android:excludeFromRecents="true">
+
+        <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.LAUNCHER"></category>
             </intent-filter>
         </activity>
+
+        <!--全局搜索界面-->
+        <activity android:name="mvc.activity.SearchActivity">
+        </activity>
+
     </application>
 
 </manifest>

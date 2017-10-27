@@ -1,12 +1,14 @@
 <resources>
-    <string name="app_name">AndroidFramwork</string>
+    <string name="app_name">仿猫眼</string>
 
     <string name="grid_view_dragged">可以拖动的GridView</string>
+    <string name="tab_home">首页</string>
+    <string name="tab_movie">电影</string>
+    <string name="tab_cinema">影院</string>
+    <string name="tab_show">演出</string>
+    <string name="tab_mine">我的</string>
 
-    <string name="homepage_rc_lv">首页RecyclerView</string>
-    <string name="video_lv">视频ListView</string>
-    <string name="find_lv">发现</string>
-    <string name="my_lv">我的ListView</string>
+
 
 
 

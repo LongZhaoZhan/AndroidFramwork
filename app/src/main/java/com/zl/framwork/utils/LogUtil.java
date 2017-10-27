@@ -17,6 +17,8 @@ public class LogUtil {
     private String methodName;//方法名
     private int lineNumber;//行数
 
+    private String TAG = "zhaolong_AndroidFramwork";
+
     public static LogUtil getInstance(){
         if(null == logUtil){
             synchronized (LogUtil.class){
@@ -52,7 +54,7 @@ public class LogUtil {
 
         // Throwable instance must be created before any methods
         getMethodNames(new Throwable().getStackTrace());
-        Log.e(className, createLog(message));
+        Log.e(TAG, createLog(message));
     }
 
 
@@ -61,7 +63,7 @@ public class LogUtil {
             return;
 
         getMethodNames(new Throwable().getStackTrace());
-        Log.i(className, createLog(message));
+        Log.i(TAG, createLog(message));
     }
 
     public void d(String message){
@@ -69,7 +71,7 @@ public class LogUtil {
             return;
 
         getMethodNames(new Throwable().getStackTrace());
-        Log.d(className, createLog(message));
+        Log.d(TAG, createLog(message));
     }
 
     public void v(String message){
@@ -77,7 +79,7 @@ public class LogUtil {
             return;
 
         getMethodNames(new Throwable().getStackTrace());
-        Log.v(className, createLog(message));
+        Log.v(TAG, createLog(message));
     }
 
     public void w(String message){
@@ -85,14 +87,14 @@ public class LogUtil {
             return;
 
         getMethodNames(new Throwable().getStackTrace());
-        Log.w(className, createLog(message));
+        Log.w(TAG, createLog(message));
     }
 
     public void wtf(String message){
         if (!isDebuggable())
             return;
         getMethodNames(new Throwable().getStackTrace());
-        Log.wtf(className, createLog(message));
+        Log.wtf(TAG, createLog(message));
     }
 
 }
