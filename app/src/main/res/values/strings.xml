@@ -7,6 +7,14 @@
     <string name="tab_cinema">影院</string>
     <string name="tab_show">演出</string>
     <string name="tab_mine">我的</string>
+    <string name="search">找影视剧、影人、影院、演出</string>
+    <string name="search_cancle_btn">取消</string>
+
+    <!--定位权限弹框-->
+    <string name="notifyTitle">提示</string>
+    <string name="notifyMsg">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。</string>
+    <string name="setting">设置</string>
+    <string name="cancel">取消</string>
 
 
 

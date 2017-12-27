@@ -1,35 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/main_tab_parent"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:orientation="horizontal"
               android:gravity="center_vertical"
+              android:orientation="horizontal"
     >
     <!--底部5个tab界面-->
     <LinearLayout
         android:id="@+id/tab_home_ll"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:layout_marginTop="3dp"
         android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"
         android:gravity="center"
+        android:orientation="vertical"
         >
+
         <ImageView
             android:id="@+id/tab_home_iv"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@mipmap/ic_launcher_round"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/home"
             />
+
         <TextView
             android:id="@+id/tab_home_tv"
-            android:textSize="13sp"
-            android:layout_marginTop="3dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
             android:text="@string/tab_home"
             android:textColor="@color/colro_textview"
+            android:textSize="13sp"
             />
     </LinearLayout>
 
@@ -37,26 +40,28 @@
         android:id="@+id/tab_movie_ll"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:layout_marginTop="3dp"
         android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"
         android:gravity="center"
+        android:orientation="vertical"
         >
+
         <ImageView
             android:id="@+id/tab_movie_iv"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@mipmap/ic_launcher_round"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/movie"
             />
+
         <TextView
             android:id="@+id/tab_movie_tv"
-            android:textSize="13sp"
-            android:layout_marginTop="3dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
             android:text="@string/tab_movie"
             android:textColor="@color/colro_textview"
+            android:textSize="13sp"
             />
     </LinearLayout>
 
@@ -64,26 +69,28 @@
         android:id="@+id/tab_cinema_ll"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:layout_marginTop="3dp"
         android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"
         android:gravity="center"
+        android:orientation="vertical"
         >
+
         <ImageView
             android:id="@+id/tab_cinema_iv"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@mipmap/ic_launcher_round"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/cinema"
             />
+
         <TextView
             android:id="@+id/tab_cinema_tv"
-            android:textSize="13sp"
-            android:layout_marginTop="3dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
             android:text="@string/tab_cinema"
             android:textColor="@color/colro_textview"
+            android:textSize="13sp"
             />
     </LinearLayout>
 
@@ -91,26 +98,28 @@
         android:id="@+id/tab_show_ll"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:layout_marginTop="3dp"
         android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"
         android:gravity="center"
+        android:orientation="vertical"
         >
+
         <ImageView
             android:id="@+id/tab_show_iv"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@mipmap/ic_launcher_round"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/show"
             />
+
         <TextView
             android:id="@+id/tab_show_tv"
-            android:textSize="13sp"
-            android:layout_marginTop="3dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
             android:text="@string/tab_show"
             android:textColor="@color/colro_textview"
+            android:textSize="13sp"
             />
     </LinearLayout>
 
@@ -118,26 +127,28 @@
         android:id="@+id/tab_mine_ll"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:layout_marginTop="3dp"
         android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"
         android:gravity="center"
+        android:orientation="vertical"
         >
+
         <ImageView
             android:id="@+id/tab_mine_iv"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@mipmap/ic_launcher_round"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/mine"
             />
+
         <TextView
             android:id="@+id/tab_mine_tv"
-            android:textSize="13sp"
-            android:layout_marginTop="3dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
             android:text="@string/tab_mine"
             android:textColor="@color/colro_textview"
+            android:textSize="13sp"
             />
     </LinearLayout>
 </LinearLayout>

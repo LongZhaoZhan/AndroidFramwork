@@ -8,12 +8,32 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
     <!--sd卡读取权限-->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+    <!--用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <!--用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <!--获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <!--用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <!--这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+    <!--用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <!--用于申请调用A-GPS模块-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"></uses-permission>
+    <!--用于申请获取蓝牙信息进行室内定位-->
+    <uses-permission android:name="android.permission.BLUETOOTH"></uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"></uses-permission>
+
+    <!-- SD卡读取权限，用户写入离线定位数据-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/app_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/app_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:name=".BaseApplication"
@@ -30,6 +50,28 @@
         <!--全局搜索界面-->
         <activity android:name="mvc.activity.SearchActivity">
         </activity>
+
+        <!--城市选择控件界面-->
+        <activity android:name="mvc.activity.CityChooseActivity">
+        </activity>
+
+        <!--首页详情web页-->
+        <activity android:name="mvc.activity.HomeDetailWebActivity">
+        </activity>
+
+        <!--高德地图定位服务-->
+        <service android:name="com.amap.api.location.APSService"></service>
+        <!--高德地图定位sdkkey-->
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="aadb69460188873f6e6b21934d49efdf">
+        </meta-data>
+
+        <!--百度地图定位服务-->
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote"> </service>
+        <!--百度地图定位sdk-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="3cZOzlcwbBVMnDQeEjZfCzr5C0pxUQbx" >
+        </meta-data>
 
     </application>
 

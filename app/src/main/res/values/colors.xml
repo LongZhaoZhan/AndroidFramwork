@@ -5,4 +5,10 @@
     <color name="colorAccent">#FF4081</color>
     <color name="darkgrey">#A9A9A9</color>
     <color name="colro_textview">#A9A9A9</color>
+    <color name="bantouming">#80000000</color>
+    <color name="touming">#40000000</color>
+    <color name="white">#ffffff</color>
+    <color name="sys_common_bg">#ECECEC</color>
+    <color name="gray_cccc">#a0f3ecec</color><!--灰色cc -->
+
 </resources>

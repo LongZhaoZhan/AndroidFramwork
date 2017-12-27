@@ -1,5 +1,6 @@
 package com.zl.framwork;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.zl.framwork.utils.LogUtil;
+import com.zl.framwork.utils.SharedUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +47,7 @@ public class MainActivity extends BaseActivity {
         if(null == savedInstanceState){
             setFragmentByTag(Constant.HOME_FRAGMENT_TAG);
         }
+
     }
 
     @Override
@@ -56,7 +59,7 @@ public class MainActivity extends BaseActivity {
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         FragmentManager fm = getSupportFragmentManager();
-        List<Fragment> list = fm.getFragments();
+        @SuppressLint("RestrictedApi") List<Fragment> list = fm.getFragments();
         if(null != list && list.size()>0){
             fList.addAll(list);
         }

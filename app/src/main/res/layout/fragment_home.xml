@@ -2,15 +2,15 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             android:background="@color/colorAccent"
+             android:background="@color/colorPrimary"
              android:fitsSystemWindows="true"
-             >
+    >
     <!--recycle列表-->
     <android.support.v7.widget.RecyclerView
         android:id="@+id/home_list_rv"
-        android:background="@android:color/white"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white">
     </android.support.v7.widget.RecyclerView>
 
     <!--头部view-->
@@ -19,31 +19,67 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginBottom="10dp"
-        android:background="@color/colorAccent"
+        android:background="@color/colorPrimary"
         >
         <!--城市控件入口-->
-        <TextView
-            android:layout_marginLeft="20dp"
-            android:id="@+id/home_title_city_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <LinearLayout
+            android:id="@+id/home_title_city_ll"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
             android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/city_bg"
             android:gravity="center"
-            android:text="合肥"
-            android:textColor="@color/darkgrey"
-            android:textSize="14sp"
-            />
+            >
+
+            <!--android:scrollbars="vertical"-->
+            <TextView
+                android:id="@+id/home_title_city_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                />
+        </LinearLayout>
         <!--搜索框入口-->
-        <TextView
-            android:id="@+id/home_title_search"
+        <RelativeLayout
+            android:id="@+id/home_title_search_rl"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="42dp"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/home_title_city_name"
-            android:gravity="center"
-            android:text="搜索"
-            android:textColor="@android:color/white"
-            android:textSize="15sp"
-            />
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/home_title_city_ll"
+            android:background="@drawable/search_bg"
+            >
+
+            <ImageView
+                android:id="@+id/home_search_img"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/search"
+                />
+
+            <TextView
+                android:id="@+id/home_title_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/home_search_img"
+                android:text="@string/search"
+                android:textColor="@color/darkgrey"
+                android:textSize="13sp"
+                />
+        </RelativeLayout>
+
     </RelativeLayout>
+
 </FrameLayout>
