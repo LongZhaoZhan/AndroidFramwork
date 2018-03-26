@@ -1,4 +1,4 @@
-package com.zl.framwork;
+package mvc;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.zl.framwork.R;
 import com.zl.framwork.utils.LogUtil;
 import com.zl.framwork.utils.SharedUtil;
 

@@ -40,7 +40,7 @@
         >
         <!--android:theme="@style/AppStartPage"-->
 
-        <activity android:name=".MainActivity">
+        <activity android:name="mvc.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"></action>
                 <category android:name="android.intent.category.LAUNCHER"></category>

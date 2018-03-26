@@ -69,78 +69,53 @@ dependencies {
 
     //包含的lib文件和jar
     compile fileTree(include: ['*.jar'], dir: 'libs')
-
     //单元测试依赖库
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     testCompile 'junit:junit:4.12'
-
     //noinspection GradleCompatible
     compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
-
     //noinspection GradleCompatible
     compile 'com.android.support:support-v4:19.1.0'
-
     //noinspection GradleCompatible
     compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
-
     //noinspection GradleCompatible
     compile 'com.android.support:recyclerview-v7:23.4.0'
-
     compile 'com.android.support:design:25.4.0'
-
     //http框架之volley框架
     compile 'com.android.volley:volley:1.0.0'
-
     //view注入式框架butterKnife奶油小刀使用
     compile 'com.jakewharton:butterknife:8.6.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
-
     //内存泄漏分析框架LeakCanary使用
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
     testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
-
     //图片加载框架fresco
     compile 'com.facebook.fresco:fresco:1.5.0'
-
     //图片加载框架Picasso
     compile 'com.squareup.picasso:picasso:2.5.2'
-
     //gif图片加载框架
     compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.8'
-
     //glide图片加载库
     compile 'com.github.bumptech.glide:glide:4.0.0'
-
     //imageLoader图片加载框架
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
-
     //okhttp http报文加载框架
     compile 'com.squareup.okhttp3:okhttp:3.9.0'
-
     //eventbus事件总线
     compile 'org.greenrobot:eventbus:3.0.0'
-
     //greenDao数据库操作类
     compile 'org.greenrobot:greendao:3.2.2'
-
-    // add library
-
     //xtuils框架
     compile 'org.xutils:xutils:3.5.0'
-
     //高德地图定位
     compile 'com.amap.api:location:latest.integration'
-
-    //百度地图定位
-
     //引入第三方对okhttp的封装okhttpFinal
     compile 'cn.finalteam:toolsfinal:1.1.5'
     compile 'com.alibaba:fastjson:1.1.46.android'
     compile project(':viewpagerlib')
-
     compile 'com.android.support:multidex:1.0.1'
 
 
