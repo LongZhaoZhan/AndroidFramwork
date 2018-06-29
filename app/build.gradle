@@ -11,16 +11,16 @@ android {
         }
     }
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "com.zl.framwork"
-        minSdkVersion 14
-        targetSdkVersion 25
+        minSdkVersion 15
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        multiDexEnabled true
+//        multiDexEnabled true
 
         signingConfig signingConfigs.config
 
@@ -77,11 +77,11 @@ dependencies {
     //noinspection GradleCompatible
     compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
     //noinspection GradleCompatible
-    compile 'com.android.support:support-v4:19.1.0'
+    compile 'com.android.support:support-v4:23.1.1'
     //noinspection GradleCompatible
-    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    compile 'com.android.support:recyclerview-v7:23.2.1'
+
     //noinspection GradleCompatible
-    compile 'com.android.support:recyclerview-v7:23.4.0'
     compile 'com.android.support:design:25.4.0'
     //http框架之volley框架
     compile 'com.android.volley:volley:1.0.0'
@@ -114,9 +114,14 @@ dependencies {
     compile 'com.amap.api:location:latest.integration'
     //引入第三方对okhttp的封装okhttpFinal
     compile 'cn.finalteam:toolsfinal:1.1.5'
-    compile 'com.alibaba:fastjson:1.1.46.android'
     compile project(':viewpagerlib')
     compile 'com.android.support:multidex:1.0.1'
+    compile 'com.alibaba:fastjson:1.2.46'
+
+    //仿钉钉、微信群聊组合头像
+    compile ('com.github.Othershe:CombineBitmap:1.0.0'){
+        exclude(module: 'appcompat-v7')
+    }
 
 
 }

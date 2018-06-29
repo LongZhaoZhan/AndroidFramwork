@@ -1,9 +1,6 @@
 package com.zl.framwork;
 
-import android.app.Application;
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.os.Build;
 import android.support.multidex.MultiDexApplication;
 
 import com.nostra13.universalimageloader.cache.disc.naming.HashCodeFileNameGenerator;
@@ -26,7 +23,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import mvc.receiver.BaiDuLocation;
 import okhttp3.Headers;
 import okhttp3.Interceptor;
 
@@ -46,7 +42,9 @@ public class BaseApplication extends MultiDexApplication{
         super.onCreate();
         myApplication = this;
         refWatcher = initLeakCanary();
+        //初始化图片加载组件
         initImageLoader();
+        //初始化http组件
         initOkhttp();
         //初始化数据库插件
         initGreenDao();

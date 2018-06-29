@@ -49,7 +49,7 @@ public class BaseActivity extends AppCompatActivity {
     /**
      * 判断是否需要检测，防止不停的弹框
      */
-    private boolean isNeedCheck = true;
+    public boolean isNeedCheck = false;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

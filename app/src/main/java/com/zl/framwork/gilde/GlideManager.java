@@ -21,16 +21,14 @@ public class GlideManager {
     private static final String TAG = "zsr";
     private BitmapListener mBitmapListener;
 
-    public GlideManager(Builder builder){
+    public GlideManager(Builder builder) {
         RequestOptions options = new RequestOptions()
                 .placeholder(builder.placeresid);
 
-        if (builder.eroorresid != 0){
+        if (builder.eroorresid != 0) {
             options.error(builder.eroorresid);
         }
-
-
-        switch (builder.type){
+        switch (builder.type) {
             case BITMAP_SCAN_CENTERN:
                 options.centerCrop();
                 break;
@@ -40,39 +38,31 @@ public class GlideManager {
             default:
                 break;
         }
-        if (builder.setCircleCrop){
+        if (builder.setCircleCrop) {
             options.circleCrop();
         }
-        if (builder.radius != 0){
+        if (builder.radius != 0) {
             options.transform(new RoundedCorners(builder.radius));
         }
-
         RequestBuilder requestBuilder = null;
-
         requestBuilder = Glide.with(builder.context).load(builder.source);
-
-        if (builder.animtime > 0){
+        if (builder.animtime > 0) {
             requestBuilder.transition(new DrawableTransitionOptions().crossFade(builder.animtime));
         }
-
         requestBuilder.apply(options)
                 .listener(new LoadListener())
                 .into(builder.imageView);
-
-
     }
 
-
-    public GlideManager addLoadLstner(BitmapListener listener){
+    public GlideManager addLoadLstner(BitmapListener listener) {
         mBitmapListener = listener;
         return this;
     }
 
     class LoadListener implements RequestListener {
-
         @Override
         public boolean onLoadFailed(@Nullable GlideException e, Object model, Target target, boolean isFirstResource) {
-            if (mBitmapListener != null){
+            if (mBitmapListener != null) {
                 mBitmapListener.onFailure(e);
             }
             return false;
@@ -80,14 +70,14 @@ public class GlideManager {
 
         @Override
         public boolean onResourceReady(Object resource, Object model, Target target, DataSource dataSource, boolean isFirstResource) {
-            if (mBitmapListener != null){
+            if (mBitmapListener != null) {
                 mBitmapListener.onSuccess(resource);
             }
             return false;
         }
     }
 
-    public static class Builder{
+    public static class Builder {
         Context context;
         int eroorresid;
         int placeresid;
@@ -97,66 +87,55 @@ public class GlideManager {
         int type;
         int animtime;
         ImageView imageView;
-        public Builder setContext(Context context){
+
+        public Builder setContext(Context context) {
             this.context = context;
             return this;
         }
 
-
-
-        public Builder setBitmapScanType(int type){
+        public Builder setBitmapScanType(int type) {
             this.type = type;
             return this;
         }
 
-        public Builder setLoadingBitmap(int resid){
+        public Builder setLoadingBitmap(int resid) {
             this.placeresid = resid;
             return this;
         }
 
-        public Builder setErrorBitmap(int resid){
+        public Builder setErrorBitmap(int resid) {
             this.eroorresid = resid;
             return this;
         }
 
-
-
-
-        public Builder setImgSource(Object source){
+        public Builder setImgSource(Object source) {
             this.source = source;
             return this;
         }
 
-
-        public Builder setCircleCrop(boolean setCircleCrop){
+        public Builder setCircleCrop(boolean setCircleCrop) {
             this.setCircleCrop = setCircleCrop;
             return this;
         }
 
-        public Builder setRoundCrop(int radius){
+        public Builder setRoundCrop(int radius) {
             this.radius = radius;
             return this;
         }
 
-
-        public Builder setAnimation(int animtime){
+        public Builder setAnimation(int animtime) {
             this.animtime = animtime;
             return this;
         }
 
-
-        public Builder setImageView(ImageView imageView){
+        public Builder setImageView(ImageView imageView) {
             this.imageView = imageView;
             return this;
         }
 
-        public GlideManager builder(){
+        public GlideManager builder() {
             return new GlideManager(this);
         }
-
-
-
     }
-
 
 }
